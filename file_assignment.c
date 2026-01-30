@@ -9,16 +9,14 @@ int main() {
     FILE *dest;
     char ch;
 
-    /* PART 1 */
     file = fopen("message.txt", "w");
     if (file == NULL) {
         printf("Error creating file.\n");
         return 1;
     }
-    fprintf(file, "Hello! This file was created on Ubuntu using C.\n");
+    fprintf(file, "Hello! This file was created using C.\n");
     fclose(file);
 
-    /* PART 2 */
     file = fopen("message.txt", "r");
     if (file == NULL) {
         printf("File not found.\n");
@@ -28,10 +26,8 @@ int main() {
         fclose(file);
     }
 
-    /* PART 3 */
     chmod("message.txt", 0600);
 
-    /* PART 4 */
     src = fopen("message.txt", "r");
     dest = fopen("copy_message.txt", "w");
 
