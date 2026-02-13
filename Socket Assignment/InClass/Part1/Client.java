@@ -9,7 +9,7 @@ public class Client {
         PrintWriter writing = null;
         Socket sock = null;
 
-        try {
+        try { // 10.42.0.1
             sock = new Socket("127.0.0.1", 5155);
             outStream = sock.getOutputStream();
             writing = new PrintWriter(outStream, true);
