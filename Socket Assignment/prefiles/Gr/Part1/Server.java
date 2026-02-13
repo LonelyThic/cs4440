@@ -3,10 +3,7 @@ package Part1;
 import java.io.*;
 import java.net.*;
 
-/**
- * Simple Server that waits for ONE client connection,
- * receives one line of text, prints it, and then exits.
- */
+
 public class Server {
     public static void main(String[] args) {
         // The port number the server will listen on
