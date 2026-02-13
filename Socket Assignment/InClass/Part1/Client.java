@@ -11,7 +11,7 @@ public class Client {
         Socket sock = null;
 
         try {
-            sock = new Socket("10.42.0.1", 5155);
+            sock = new Socket("127.0.0.1", 5155);
             outStream = sock.getOutputStream();
             writing = new PrintWriter(outStream, true);
             writing.println("Hello, server!");

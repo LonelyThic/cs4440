@@ -4,18 +4,17 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
-
 public class Client {
     public static void main(String[] args) {
-        String host = "10.42.0.1";      // localhost for loopback(127.0.0.1)
-        int port = 5155;                // Must match server's port
+        String host = "127.0.0.1"; // localhost for loopback()10.42.0.1
+        int port = 5155; // Must match server's port
 
-        try (Socket socket = new Socket(host, port)) {              // Connect to server
+        try (Socket socket = new Socket(host, port)) { // Connect to server
             System.out.println("Connected to server at " + host + ":" + port);
 
             // Prepare to send data to server
             OutputStream out = socket.getOutputStream();
-            PrintWriter writer = new PrintWriter(out, true);        // true = auto-flush
+            PrintWriter writer = new PrintWriter(out, true); // true = auto-flush
 
             // Get message from user
             Scanner scanner = new Scanner(System.in);
