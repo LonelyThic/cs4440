@@ -1,26 +1,20 @@
-package Socket Assignment.prefiles.Ch;
-
-import java.io.*;                  // Import classes for input and output streams
-import java.net.*;                // Import classes for networking (ServerSocket, Socket)
-import java.util.*;               // Import classes for HashMap and ArrayList
+import java.io.*;
+import java.net.*;
+import java.util.*;
 
 public class Server {
 
     // This HashMap stores the mailbox:
-    // Key = addressee
-    // Value = list of messages for that addressee
     private static HashMap<String, ArrayList<String>> mailboxes = new HashMap<>();
 
-    // This controls the mailbox size:
-    // 0 means unlimited mailbox
-    // Any positive number means limited mailbox
+    //mailbox size:
     private static int mailboxSizeLimit = 5; // Change to 0 for unlimited
 
     public static void main(String[] args) {
         ServerSocket serverSocket = null;   // This listens for client connections
 
         try {
-            // Create a ServerSocket that listens on port 5155
+            // Create a ServerSocket
             serverSocket = new ServerSocket(5155);
 
             // Print a message to show the server is running
@@ -67,7 +61,6 @@ public class Server {
         }
     }
 
-    // This method accepts a String message and figures out its format
     private static void processMessage(String message) {
         // Split the message using commas
         String[] parts = message.split(",");
@@ -107,7 +100,6 @@ public class Server {
         storeMessage(addressee, storedMessage);
     }
 
-    // This method stores a message in the HashMap mailbox
     private static void storeMessage(String addressee, String message) {
         // If the mailbox for this addressee does not exist, create it
         if (!mailboxes.containsKey(addressee)) {

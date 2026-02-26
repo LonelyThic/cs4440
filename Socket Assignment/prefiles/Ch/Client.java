@@ -1,14 +1,12 @@
-package Ch;
-
-import java.io.*;              // Import classes for input and output streams
-import java.net.*;            // Import classes for networking (Socket)
+import java.io.*;
+import java.net.*;
 
 public class Client {
 
     public static void main(String[] args) {
-        Socket socket = null;             // This will hold the connection to the server
-        PrintWriter out = null;            // This will be used to send data to the server
-        BufferedReader userInput = null;   // This will read input from the keyboard
+        Socket socket = null;             //hold the connection to the server
+        PrintWriter out = null;            //used to send data to the server
+        BufferedReader userInput = null;   //read input from the keyboard
 
         try {
             // Create a socket that connects to the server running on this computer (127.0.0.1) on port 5155
