@@ -2,17 +2,6 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-/*
- * Multi-threaded Mailbox Server
- *
- * Responsibilities:
- * 1. Continuously listen for incoming client connections.
- * 2. Create a new thread for each client so multiple clients
- *    can communicate with the server simultaneously.
- * 3. Store messages received from clients into a mailbox.
- * 4. Send confirmation responses back to clients.
- */
-
 public class Server {
 
     // Port number used by server socket
